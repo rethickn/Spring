@@ -64,7 +64,8 @@ public class TutorialController {
 	public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
 		try {
 			Tutorial _tutorial = tutorialRepository
-					.save(new Tutorial(tutorial.getName(), tutorial.getGovtID(), tutorial.getAddress(), tutorial.isregistered()));
+					.save(new Tutorial(tutorial.getName(), tutorial.getGovtID(), tutorial.getAddress(),
+							tutorial.isregistered()));
 			return new ResponseEntity<>(_tutorial, HttpStatus.CREATED);
 		} catch (Exception e) {
 			return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
