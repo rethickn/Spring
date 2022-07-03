@@ -1,13 +1,13 @@
-package com.bezkoder.spring.jpa.h2;
+package com.hackathon.spring.jpa.h2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootJpaH2Application {
+public class LandRegistryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootJpaH2Application.class, args);
+		SpringApplication.run(LandRegistryApplication.class, args);
 	}
 
 }

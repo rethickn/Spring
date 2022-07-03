@@ -1,10 +1,10 @@
-package com.bezkoder.spring.jpa.h2.model;
+package com.hackathon.spring.jpa.h2.model;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "tutorials")
-public class Tutorial {
+@Table(name = "registry")
+public class Registry {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,19 +18,19 @@ public class Tutorial {
 
 	@Column(name = "address")
 	private String address;
-	
+
 	@Column(name = "registered")
 	private boolean registered;
 
-	public Tutorial() {
+	public Registry() {
 
 	}
 
-	public Tutorial(String name, String GovtID, String address, boolean registered) {
+	public Registry(String name, String GovtID, String address, boolean registered) {
 		this.name = name;
 		this.GovtID = GovtID;
 		this.registered = registered;
-		this.address= address;
+		this.address = address;
 	}
 
 	public long getId() {
@@ -44,11 +44,11 @@ public class Tutorial {
 	public String getAddress() {
 		return address;
 	}
-	
+
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -71,7 +71,8 @@ public class Tutorial {
 
 	@Override
 	public String toString() {
-		return "Tutorial [id=" + id + ", name=" + name + ", govtID=" + GovtID + ", address=" + address + ", registered=" + registered + "]";
+		return "Registry [id=" + id + ", name=" + name + ", govtID=" + GovtID + ", address=" + address + ", registered="
+				+ registered + "]";
 	}
 
 }
